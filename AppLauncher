@@ -1,0 +1,41 @@
+Usage
+
+1. Enter a location name in the text field (e.g., "New York City").
+2. Click the search button or press Enter.
+3. The application will fetch the current weather data for the specified location and display the following information:
+- Temperature in Fahrenheit
+- Weather condition (e.g., Clear, Cloudy, Rain, Snow)
+- Appropriate weather icon based on the weather condition
+
+Code Overview
+
+The application consists of the following Java files:
+
+- `WeatherApp.java`: Contains the main logic for fetching weather data from the Open-Meteo API and processing the response.
+- `WeatherAppGui.java`: Implements the graphical user interface and handles user interactions.
+- `AppLauncher.java`: The entry point of the application, responsible for launching the GUI.
+
+WeatherApp.java
+
+This file contains two main methods:
+
+- `getWeatherData(String locName)`: Fetches the weather data for the given location name. It first calls `getLocationData` to retrieve the latitude and longitude coordinates for the location. Then, it makes a request to the Open-Meteo API to fetch the weather data. The method returns a `JSONObject` containing the temperature and weather condition.
+- `getLocationData(String locName)`: Retrieves the latitude and longitude coordinates for the given location name by making a request to the Open-Meteo geocoding API.
+
+WeatherAppGui.java
+
+This file implements the graphical user interface (GUI) for the weather app. It extends the `JFrame` class and contains the following components:
+
+- `JTextField`: Allows the user to enter a location name.
+- `JLabel`: Displays the current temperature, weather condition, and weather icon.
+- `JButton`: Triggers the search functionality when clicked.
+
+The `addComponents` method sets up the GUI components and adds an `ActionListener` to the search button. When the user clicks the search button, the application fetches the weather data for the entered location using the `WeatherApp.getWeatherData` method and updates the labels with the retrieved information.
+
+AppLauncher.java
+
+This file contains the `main` method, which is the entry point of the application. It creates an instance of the `SwingUtilities` class and invokes the `WeatherAppGui` class on the Event Dispatch Thread (EDT) to ensure proper rendering of the GUI components.
+
+API Documentation
+
+The application uses the Open-Meteo API to fetch weather data. For more information about the API endpoints and available parameters, refer to the [Open-Meteo API documentation](https://open-meteo.com/en/docs).
