@@ -13,9 +13,3 @@ A Java application that provides weather information for a given location. The a
 
 - Java Development Kit (JDK) 8 or higher
 - JSON.simple library (included in the project)
-
-## Getting Started
-
-### Installation
-
-1. Clone the repository or download the project files:
