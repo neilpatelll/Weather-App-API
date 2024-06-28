@@ -9,7 +9,3 @@ A Java application that provides weather information for a given location. The a
 - Search for locations by name
 - Convert temperature from Celsius to Fahrenheit
 
-## Prerequisites
-
-- Java Development Kit (JDK) 8 or higher
-- JSON.simple library (included in the project)
