@@ -8,4 +8,3 @@ A Java application that provides weather information for a given location. The a
 - Display the current temperature, weather condition, and an appropriate weather icon in a user-friendly GUI
 - Search for locations by name
 - Convert temperature from Celsius to Fahrenheit
-- 
